@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* ── Beacon Design tokens (Tailwind v4 CSS-first config) ─────── */
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand */
+  --color-beacon-blue: #3b5bdb;
+  --color-beacon-blue-hover: #2f4ac4;
+  --color-beacon-blue-light: #eef2ff;
+
+  /* Page / surface */
+  --color-background: #f4f6fa;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+
+  /* Text */
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9ca3af;
+
+  /* Status — Critical */
+  --color-status-critical-bg: #fdecea;
+  --color-status-critical-text: #b91c1c;
+  --color-status-critical-border: #f5c6c2;
+
+  /* Status — Warning */
+  --color-status-warning-bg: #fff8e1;
+  --color-status-warning-text: #92400e;
+  --color-status-warning-border: #fcd34d;
+
+  /* Status — Success */
+  --color-status-success-bg: #ecfdf5;
+  --color-status-success-text: #065f46;
+  --color-status-success-border: #a7f3d0;
+
+  /* Status — Offline */
+  --color-status-offline-bg: #f3f4f6;
+  --color-status-offline-text: #6b7280;
+  --color-status-offline-border: #d1d5db;
+
+  /* Status — Pending */
+  --color-status-pending-bg: #fffbeb;
+  --color-status-pending-text: #92400e;
+  --color-status-pending-border: #fde68a;
+
+  /* Anomaly */
+  --color-anomaly-bg: #fff7ed;
+  --color-anomaly-border: #fed7aa;
+  --color-anomaly-text: #9a3412;
+  --color-anomaly-icon: #ea580c;
+
+  /* Border radii */
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+  --radius-badge: 6px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgba(0,0,0,0.08), 0 1px 2px -1px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px 0 rgba(0,0,0,0.10), 0 2px 4px -2px rgba(0,0,0,0.06);
+
+  /* Spacing extras */
+  --spacing-4_5: 1.125rem;
+  --spacing-13: 3.25rem;
+  --spacing-18: 4.5rem;
+}
+
+/* ── Base reset / defaults ────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+}
+
+/* ── Scrollbar (subtle) ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
