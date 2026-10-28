@@ -10,8 +10,8 @@ import type { Role } from "@/lib/types";
 
 const ROLE_REDIRECT: Record<Role, string> = {
   operations_director: "/dashboard",
-  technician: "/check-in",
-  household: "/",
+  technician: "/technician",
+  household: "/billing",
 };
 
 export function LoginForm() {
@@ -148,6 +148,35 @@ export function LoginForm() {
       >
         {isPending ? "Signing in…" : "Sign in"}
       </Button>
+
+      {/* Quick Demo Fill Buttons */}
+      <div className="pt-3 border-t border-slate-100 space-y-2">
+        <p className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 text-center">
+          QUICK FILL DEMO CREDENTIALS
+        </p>
+        <div className="grid grid-cols-2 gap-2 text-xs font-bold">
+          <button
+            type="button"
+            onClick={() => {
+              setEmail("amara@beacon.demo");
+              setPassword("beacon123");
+            }}
+            className="py-2 px-2 bg-slate-50 hover:bg-blue-50 text-slate-700 hover:text-blue-600 border border-slate-200 rounded-xl transition-colors cursor-pointer text-center"
+          >
+            Amara (Ops Dir)
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setEmail("kwame@beacon.demo");
+              setPassword("beacon123");
+            }}
+            className="py-2 px-2 bg-slate-50 hover:bg-blue-50 text-slate-700 hover:text-blue-600 border border-slate-200 rounded-xl transition-colors cursor-pointer text-center"
+          >
+            Kwame (Tech)
+          </button>
+        </div>
+      </div>
     </form>
   );
 }
