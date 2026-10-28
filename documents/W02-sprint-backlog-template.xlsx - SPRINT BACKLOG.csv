@@ -1,0 +1,28 @@
+SPRINT 1 BACKLOG,,,,"Section 3, Group 6, ThinkFeelImagine: 6788112 Waris (Beam), 6788124 Leenawat (Sunny), 6788082 Tanyawat (Wave), 6788217 Natchapol (Boss), 6788031 Nattanan (Nut)",,,,,,,,,,,,,,,,,
+ID,User Story,Tasks,#Hours,Owner,Status,"Estimated effort hours
+(relative to team capacity)",Day 1,Day 2,Day 3,Day 4,Day 5,Day 6,Day 7,Day 8,Day 9,Day 10,Day 11,Day 12,Day 13,Day 14,Day 15
+A-01,"As Amara, I want to view each village’s latest technician check-in and reading-submission status so I can identify villages needing follow-up.",Build village-status API using latest check-ins and submitted readings.,4,Wave,Completed,18,-,-,-,-,3,-,-,1,-,-,-,-,-,-,-
+,,Build the village dashboard with check-in and reading status.,6,Sunny,Completed,,-,-,-,2,-,-,4,-,-,-,-,-,-,-,-
+,,Flag villages with no check-in or reading update for more than 24 hours.,3,Boss,Completed,,-,-,-,-,-,-,-,-,3,-,-,-,-,-,-
+,,Test current status and the 24-hour stale-update boundary.,2,Nut,Completed,,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-
+,,Integrate live data and fix dashboard acceptance-test defects.,3,Wave,Completed,,-,-,-,-,-,-,-,-,-,-,3,-,-,-,-
+A-02,"As a technician, I want to record my village check-in with time, location and notes so Amara can track visits.",Define shared village/meter data and save authenticated technician check-ins.,4,Wave,Completed,17,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+,,"Build the check-in form for village, time, location and notes.",4,Sunny,Completed,,-,4,-,-,-,-,-,-,-,-,-,-,-,-,-
+,,Persist offline or invalid-location check-ins locally as pending sync.,4,Beam,Completed,,-,-,4,-,-,-,-,-,-,-,-,-,-,-,-
+,,Integrate check-in visibility for Amara and pending-location handling.,3,Boss,Completed,,-,-,-,-,-,3,-,-,-,-,-,-,-,-,-
+,,"Test online save, offline persistence and invalid-location pending status.",2,Nut,Completed,,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-
+A-03,"As Amara, I want technicians’ submitted readings to be validated and stored so the dashboard shows reliable reading status.","Create the shared reading API and storage for meter/village, value, unit and date.",4,Wave,Completed,18,1,-,3,-,-,-,-,-,-,-,-,-,-,-,-
+,,Validate reading values and reject invalid or non-numeric submissions.,4,Beam,Completed,,-,-,2,-,2,-,-,-,-,-,-,-,-,-,-
+,,Connect reading submission and validation messages to dashboard status.,4,Sunny,Completed,,-,-,-,-,-,-,2,-,2,-,-,-,-,-,-
+,,Integrate queued readings with the shared sync service and dashboard.,4,Boss,Completed,,-,-,-,-,-,-,-,-,-,-,4,-,-,-,-
+,,Test valid and invalid readings plus offline submission and later sync.,2,Nut,Completed,,-,-,-,-,-,-,-,-,-,-,-,-,1,1,-
+T-10,"As a technician, I want to enter meter readings and see previous values and anomaly warnings so I can capture accurate readings offline or online.",Build meter selection and value/unit/date entry using the shared reading API.,6,Sunny,Completed,18,-,2,-,4,-,-,-,-,-,-,-,-,-,-,-
+,,Retrieve and display the previous reading for the selected meter.,4,Wave,Completed,,-,-,2,-,2,-,-,-,-,-,-,-,-,-,-
+,,Implement anomaly warnings and preserve the entered reading for review.,4,Beam,Completed,,-,-,-,-,4,-,-,-,-,-,-,-,-,-,-
+,,Connect meter entry to offline queueing and verify previous-value/anomaly paths.,4,Boss,Completed,,-,-,-,-,-,2,-,-,2,-,-,-,-,-,-
+T-12,"As a technician, I want queued data to sync when connectivity returns so check-ins and readings reach Amara without being lost.",Build shared persistent queue and reconnect-triggered sync for both record types.,6,Beam,Completed,24,6,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+,,Handle conflicts and failed sync with retained queue items and safe retries.,6,Beam,Completed,,-,-,-,-,-,-,-,6,-,-,-,-,-,-,-
+,,Show pending/synced/error states and add manual retry controls.,4,Boss,Completed,,-,-,-,-,-,-,-,-,-,-,1,3,-,-,-
+,,Integrate end-to-end sync and ensure retries do not create duplicate records.,4,Wave,Completed,,-,-,-,-,-,-,-,4,-,-,-,-,-,-,-
+,,"Test reconnect, conflict, failed retry and recovery across all five stories.",4,Nut,Completed,,-,-,-,-,-,-,-,-,-,-,-,-,-,4,-
+,,TOTAL PLANNED HOURS,95,,,95,11,6,11,6,11,5,6,11,7,-,8,3,5,5,-
